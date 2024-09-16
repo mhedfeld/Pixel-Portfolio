@@ -1,0 +1,104 @@
+
+/* FONT DECLARATIONS*/
+@font-face {
+    font-family: Comic;
+    src: url(dpcomic.ttf);
+}
+@font-face {
+    font-family: 'Headerfont' ;
+    src: url(ComicSansMSPixel.ttf);
+}
+.container { 
+    display: inline-block;
+}
+
+.text {
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black; /* Adds Text Border in form of Small text shadow */
+    color: aliceblue;
+    font-size: 90px;
+    font-family: Comic;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    left:50%;
+    top: 15%;
+    border-right: 5px solid;
+    width: 11ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(43, end),
+        cursor-blink 0.75s steps(1) infinite;
+}
+/*Cursor blinking*/ 
+@keyframes cursor-blink {
+    50% { border-color: transparent;}
+    
+    
+}
+@keyframes typing {
+   from { width: 0}
+    to { width: 12ch}
+}
+
+.navbar ul{
+    /*Navbar Glass Morhpism  generated with css.glass*/
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(173, 171, 171, 0.34);
+
+    position: fixed;
+    bottom: 50px;
+    left: 55px;
+    right: 55px;
+    list-style-type: none;
+    padding: 10px 10px;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+    
+.navbar a{
+    /*Navbar Glass Morhpism  generated with css.glass*/
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(173, 171, 171, 0.34);
+
+    font-family: 'Headerfont', Comic;  
+    font-size: 32px;
+    font-family: Comic;
+    color: white;
+    text-decoration: none;
+    padding: 17px;
+    margin-right: 120px;
+    margin-left: 120px;
+    display: block;
+    text-align: center;   
+}
+.navbar a:hover{
+    background-color: rgb(1, 188, 188);
+}
+.navbar li{
+    float: left;
+}
+
+body {
+    background-image: url('WelcomeBotgif.gif');
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}

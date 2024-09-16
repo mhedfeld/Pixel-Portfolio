@@ -1,0 +1,139 @@
+@font-face {
+    font-family: Comic;
+    src: url(dpcomic.ttf);
+}
+@font-face {
+    font-family: 'Headerfont' ;
+    src: url(ComicSansMSPixel.ttf);
+}
+body{
+    background-color: rgb(44, 43, 43);
+
+}
+
+.navbar ul{
+    /*Navbar Glass Morhpism  generated with css.glass*/
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(173, 171, 171, 0.34);
+
+    position: fixed;
+    top: 0;
+    left: 55px;
+    right: 55px;
+    list-style-type: none;
+    padding: 10px 10px;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+    
+.navbar a{
+    /*Navbar Glass Morhpism  generated with css.glass*/
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(173, 171, 171, 0.34);
+
+    font-family: 'Headerfont', Comic;  
+    font-size: 32px;
+    font-family: Comic;
+    color: white;
+    text-decoration: none;
+    padding: 17px;
+    margin-right: 120px;
+    margin-left: 120px;
+    display: block;
+    text-align: center;   
+}
+.navbar a:hover{
+    background-color: rgb(1, 188, 188);
+}
+.navbar li{
+    float: left;
+}
+.cutoff-text{
+    --max-lines: 5;
+    --line-height: 1.4;
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+    overflow: hidden;
+    position: relative;
+}
+.cutoff-text::before {
+    content: "";
+    position: absolute;
+    height: calc(1em * var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+}
+.cutoff-text.expanded {
+    max-height: none;
+    overflow: visible;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-bg-color);
+    color: white;
+}
+.about h2 span{
+    color: var(--main-color);
+    text-shadow: 0 0 50px var(--main-color);
+}
+.about-img{
+    border-radius: 50%;
+}
+.about-img img{
+    position: relative;
+    width: 18vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    top: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.about-img img:hover{
+    box-shadow: 0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+.heading{
+    font-family: headerfont;
+    text-align: center;
+    font-size: 8rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.5;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.about-content .text-animation span::before{
+    content: 'Software Developer';
+    color: var()(--main-color);
+    animation: words 20s infinite;
+}
+.about-content .text.text-animation span::after{
+    content: "";
+    background-color: var(--second-bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--second-bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
