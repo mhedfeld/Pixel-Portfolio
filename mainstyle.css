@@ -91,14 +91,117 @@
 
 body {
     background-image: url('WelcomeBotgif.gif');
-    background-size: 90% auto;
+    background-size: contain; /* Adjust to maintain aspect ratio */
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;
     height: 100vh;
     width: 100vw;
     margin: 0;
+    overflow: hidden; /* Prevents scrolling */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+@media (max-width: 430px) {
+    .text {
+        font-size: 60px; /* Decrease font size for smaller screens */
+        top: 10%;
+    }
+
+    .aboutinfo {
+        font-size: 28px; /* Adjust size for better readability on mobile */
+        top: 50%;
+    }
+
+    .navbar a {
+        font-size: 24px; /* Adjust navbar font size */
+        padding: 12px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .navbar ul {
+        left: 20px;
+        right: 20px;
+        bottom: 30px;
+    }
+}
+
+/* Larger mobile devices (iPhone 14 Plus, iPhone 14 Pro Max) */
+@media (max-width: 844px) and (min-width: 431px) {
+    .text {
+        font-size: 70px; /* Adjust for larger mobile screens */
+        top: 8%;
+    }
+
+    .aboutinfo {
+        font-size: 30px; /* Adjust size for better readability on larger screens */
+        top: 45%;
+    }
+
+    .navbar a {
+        font-size: 28px;
+        padding: 15px;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    .navbar ul {
+        left: 30px;
+        right: 30px;
+        bottom: 40px;
+    }
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) {
+    .text {
+        font-size: 80px;
+        top: 7%;
+    }
+
+    .aboutinfo {
+        font-size: 32px;
+        top: 42%;
+    }
+
+    .navbar a {
+        font-size: 30px;
+        padding: 17px;
+        margin-right: 90px;
+        margin-left: 90px;
+    }
+
+    .navbar ul {
+        left: 40px;
+        right: 40px;
+        bottom: 40px;
+    }
+}
+
+/* Media query for desktop */
+@media only screen and (min-width: 1024px) {
+    .text {
+        font-size: 90px;
+        top: 5%;
+    }
+
+    .aboutinfo {
+        font-size: 35px;
+        top: 40%;
+    }
+
+    .navbar a {
+        font-size: 32px;
+        padding: 17px;
+        margin-right: 120px;
+        margin-left: 120px;
+    }
+
+    .navbar ul {
+        left: 55px;
+        right: 55px;
+        bottom: 50px;
+    }
 }

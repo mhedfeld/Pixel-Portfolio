@@ -1,0 +1,142 @@
+/* FONT DECLARATIONS */
+@font-face {
+    font-family: Comic;
+    src: url(dpcomic.ttf);
+}
+@font-face {
+    font-family: 'Headerfont';
+    src: url(ComicSansMSPixel.ttf);
+}
+
+form {
+    background: rgba(173, 171, 171, 0.13); /* Glass morphism background */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    backdrop-filter: blur(5.2px); /* Blur effect */
+    -webkit-backdrop-filter: blur(5.2px); /* Safari support */
+    border: 1px solid rgba(173, 171, 171, 0.34); /* Border similar to navbar */
+    max-width: 49rem; /* Reduced width by 30% */
+    margin: 10rem auto; /* Increased margin from top to move form higher */
+    padding: 1.4rem; /* Reduced padding by 30% */
+    text-align: center; /* Center the content */
+    color: white; /* Text color */
+}
+
+form h2 {
+    margin-bottom: 2.1rem; /* Reduced margin by 30% */
+    color: white;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.4rem; /* Reduced gap by 30% */
+}
+
+form .input-box input,
+form textarea {
+    font-family: 'Headerfont', Comic; /* Use custom font */
+    width: 93%;
+    padding: 1.05rem; /* Reduced padding by 30% */
+    font-size: 1.12rem; /* Reduced font-size by 30% */
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 0.56rem; /* Reduced border-radius by 30% */
+    border: 2px solid rgba(173, 171, 171, 0.34); /* Light border for input */
+    margin: 0.6rem 0; /* Reduced margin by 30% */;
+    resize: none;
+    outline: none; /* Remove default outline */
+}
+
+form textarea {
+    font-size: 1rem; /* Reduced font-size for textarea */
+    padding: 0.85rem; /* Reduced padding for textarea */
+}
+
+form .input-box input:focus,
+form textarea:focus {
+    border: 2px solid var(--main-color); /* Add border on focus for input */
+}
+
+form .btn {
+    font-family: 'Headerfont', Comic; /* Use custom font */
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 16px;
+    padding: 0.7rem 1.4rem; /* Reduced padding by 30% */
+    color: white;
+    font-size: 1.12rem; /* Reduced font-size by 30% */
+    cursor: pointer;
+    border: 2px solid rgba(173, 171, 171, 0.34);
+    transition: background-color 0.3s ease;
+}
+
+form .btn:hover {
+    background-color: rgb(1, 188, 188); /* Change color on hover like navbar links */
+}
+
+/* Body Style */
+body {
+    background-image: url('Contactme.gif');
+    background-size: 100% auto; /* Adjust to maintain aspect ratio */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden; /* Prevents scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.navbar ul {
+    /* Navbar Glass Morhpism generated with css.glass */
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(173, 171, 171, 0.34);
+
+    position: fixed;
+    bottom: 50px;
+    left: 55px;
+    right: 55px;
+    list-style-type: none;
+    padding: 10px 10px;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+    
+.navbar a {
+    /* Navbar Glass Morhpism generated with css.glass */
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(173, 171, 171, 0.34);
+
+    font-family: 'Headerfont', Comic;  
+    font-size: 32px;
+    font-family: Comic;
+    color: white;
+    text-decoration: none;
+    padding: 17px;
+    margin-right: 120px;
+    margin-left: 120px;
+    display: block;
+    text-align: center;   
+}
+
+.navbar a:hover {
+    background-color: rgb(1, 188, 188);
+}
+
+.navbar li {
+    float: left;
+}
