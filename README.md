@@ -6,11 +6,11 @@ Responsive Website (HTML , CSS)
 ----------------
 
 DISCLAIMER! 
-THIS CODE IS NOT YET FINISHED AND WILL SHOW FLAWS AS SUCH!
-THERE MIGHT BE CODE THAT DOES NOTHING AT ALL, LEFT INSIDE!
+THIS CODE IS NOT YET FINISHED AND WILL SHOW FLAWS AS SUCH!<br>
+THERE MIGHT BE CODE THAT DOES NOTHING AT ALL, LEFT INSIDE!<br>
 
-This is a very basic Website consisting of HTML and CSS only. 
-Each Page (Home, About, Contact) has its individual styling sheet. 
+This is a very basic Website consisting of HTML and CSS only. <br>
+Each Page (Home, About, Contact) has its individual styling sheet.<br> 
 Media Queries have been implemented to achieve a very "basic" responsive layout. 
 -> They Currently do not support the smallest nor biggest screen sizes. 
 -> This will be fixed in the following version. 
