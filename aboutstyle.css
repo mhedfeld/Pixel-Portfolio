@@ -97,12 +97,12 @@
 
 body {
     background-image: url('8bitcodergif.gif');
-    background-size: 100% auto; /* Ensures the background covers the entire viewport */
+    background-size: 100% auto; 
     background-repeat: no-repeat;
-    background-position: center center; /* Centers the background image */
+    background-position: center center; 
     background-color: black;
-    max-height: 100vh; /* Full viewport height */
-    max-width: 100vw; /* Full viewport width */
+    max-height: 100vh; 
+    max-width: 100vw;
     margin: 50px;
     overflow: hidden;
     display: flex;
@@ -110,20 +110,20 @@ body {
     justify-content: flex-end;
 }
 
-/* Responsive CSS for iPhone 14 and newer */
+/* iPhone 14 and newer */
 @media (max-width: 430px) {
     .text {
-        font-size: 60px; /* Decrease font size for smaller screens */
+        font-size: 60px; 
         top: 10%;
     }
 
     .aboutinfo {
-        font-size: 28px; /* Adjust size for better readability on mobile */
+        font-size: 28px; 
         top: 50%;
     }
 
     .navbar a {
-        font-size: 24px; /* Adjust navbar font size */
+        font-size: 24px; 
         padding: 12px;
         margin-right: 40px;
         margin-left: 40px;
@@ -136,15 +136,15 @@ body {
     }
 }
 
-/* Larger mobile devices (iPhone 14 Plus, iPhone 14 Pro Max) */
+/* (iPhone 14 Plus, iPhone 14 Pro Max) */
 @media (max-width: 844px) and (min-width: 431px) {
     .text {
-        font-size: 70px; /* Adjust for larger mobile screens */
+        font-size: 70px; 
         top: 8%;
     }
 
     .aboutinfo {
-        font-size: 30px; /* Adjust size for better readability on larger screens */
+        font-size: 30px; 
         top: 45%;
     }
 
@@ -162,33 +162,9 @@ body {
     }
 }
 
-/* Media query for tablets */
-@media (min-width: 768px) {
-    .text {
-        font-size: 80px;
-        top: 7%;
-    }
 
-    .aboutinfo {
-        font-size: 32px;
-        top: 42%;
-    }
 
-    .navbar a {
-        font-size: 30px;
-        padding: 17px;
-        margin-right: 90px;
-        margin-left: 90px;
-    }
-
-    .navbar ul {
-        left: 40px;
-        right: 40px;
-        bottom: 40px;
-    }
-}
-
-/* Media query for desktop */
+/* Desktop */
 @media only screen and (min-width: 1024px) {
     .text {
         font-size: 90px;

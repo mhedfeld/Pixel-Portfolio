@@ -91,7 +91,7 @@
 
 body {
     background-image: url('WelcomeBotgif.gif');
-    background-size: contain; /* Adjust to maintain aspect ratio */
+    background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;
@@ -105,17 +105,17 @@ body {
 }
 @media (max-width: 430px) {
     .text {
-        font-size: 60px; /* Decrease font size for smaller screens */
+        font-size: 60px; 
         top: 10%;
     }
 
     .aboutinfo {
-        font-size: 28px; /* Adjust size for better readability on mobile */
+        font-size: 28px; 
         top: 50%;
     }
 
     .navbar a {
-        font-size: 24px; /* Adjust navbar font size */
+        font-size: 24px; 
         padding: 12px;
         margin-right: 40px;
         margin-left: 40px;
@@ -128,15 +128,15 @@ body {
     }
 }
 
-/* Larger mobile devices (iPhone 14 Plus, iPhone 14 Pro Max) */
+/* (iPhone 14 Plus, iPhone 14 Pro Max) */
 @media (max-width: 844px) and (min-width: 431px) {
     .text {
-        font-size: 70px; /* Adjust for larger mobile screens */
+        font-size: 70px; 
         top: 8%;
     }
 
     .aboutinfo {
-        font-size: 30px; /* Adjust size for better readability on larger screens */
+        font-size: 30px; 
         top: 45%;
     }
 
@@ -150,32 +150,6 @@ body {
     .navbar ul {
         left: 30px;
         right: 30px;
-        bottom: 40px;
-    }
-}
-
-/* Media query for tablets */
-@media (min-width: 768px) {
-    .text {
-        font-size: 80px;
-        top: 7%;
-    }
-
-    .aboutinfo {
-        font-size: 32px;
-        top: 42%;
-    }
-
-    .navbar a {
-        font-size: 30px;
-        padding: 17px;
-        margin-right: 90px;
-        margin-left: 90px;
-    }
-
-    .navbar ul {
-        left: 40px;
-        right: 40px;
         bottom: 40px;
     }
 }

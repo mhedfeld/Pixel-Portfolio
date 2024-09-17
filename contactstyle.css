@@ -15,15 +15,15 @@ form {
     backdrop-filter: blur(5.2px); /* Blur effect */
     -webkit-backdrop-filter: blur(5.2px); /* Safari support */
     border: 1px solid rgba(173, 171, 171, 0.34); /* Border similar to navbar */
-    max-width: 49rem; /* Reduced width by 30% */
-    margin: 10rem auto; /* Increased margin from top to move form higher */
-    padding: 1.4rem; /* Reduced padding by 30% */
-    text-align: center; /* Center the content */
-    color: white; /* Text color */
+    max-width: 49rem; 
+    margin: 10rem auto;
+    padding: 1.4rem; 
+    text-align: center; 
+    color: white; 
 }
 
 form h2 {
-    margin-bottom: 2.1rem; /* Reduced margin by 30% */
+    margin-bottom: 2.1rem; 
     color: white;
 }
 
@@ -31,66 +31,67 @@ form .input-box {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.4rem; /* Reduced gap by 30% */
+    gap: 1.4rem; 
 }
 
 form .input-box input,
 form textarea {
     font-family: 'Headerfont', Comic; /* Use custom font */
-    width: 93%;
-    padding: 1.05rem; /* Reduced padding by 30% */
-    font-size: 1.12rem; /* Reduced font-size by 30% */
+    width: 94%;
+    padding: 1.05rem; 
+    font-size: 1.12rem; 
     color: var(--text-color);
     background: rgba(255, 255, 255, 0.1); /* Transparent background */
-    border-radius: 0.56rem; /* Reduced border-radius by 30% */
+    border-radius: 0.56rem; 
     border: 2px solid rgba(173, 171, 171, 0.34); /* Light border for input */
-    margin: 0.6rem 0; /* Reduced margin by 30% */;
+    margin: 0.6rem 0; 
     resize: none;
-    outline: none; /* Remove default outline */
+    outline: none; 
 }
 
 form textarea {
-    font-size: 1rem; /* Reduced font-size for textarea */
-    padding: 0.85rem; /* Reduced padding for textarea */
+    font-size: 1rem; 
+    padding: 0.85rem; 
 }
 
 form .input-box input:focus,
 form textarea:focus {
-    border: 2px solid var(--main-color); /* Add border on focus for input */
+    border: 2px solid var(--main-color); 
 }
 
 form .btn {
     font-family: 'Headerfont', Comic; /* Use custom font */
     background: rgba(173, 171, 171, 0.13);
     border-radius: 16px;
-    padding: 0.7rem 1.4rem; /* Reduced padding by 30% */
+    padding: 0.7rem 1.4rem; 
     color: white;
-    font-size: 1.12rem; /* Reduced font-size by 30% */
+    font-size: 1.12rem; 
     cursor: pointer;
     border: 2px solid rgba(173, 171, 171, 0.34);
     transition: background-color 0.3s ease;
 }
 
 form .btn:hover {
-    background-color: rgb(1, 188, 188); /* Change color on hover like navbar links */
+    background-color: rgb(1, 188, 188); 
 }
 
 /* Body Style */
 body {
     background-image: url('Contactme.gif');
-    background-size: 100% auto; /* Adjust to maintain aspect ratio */
+    background-size: 100% auto; 
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;
     height: 100vh;
     width: 100vw;
     margin: 0;
-    overflow: hidden; /* Prevents scrolling */
+    overflow: hidden; /* Prevent scrolling */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
+/* Navbar Styling*/ 
 .navbar ul {
     /* Navbar Glass Morhpism generated with css.glass */
     background: rgba(173, 171, 171, 0.13);
@@ -139,4 +140,84 @@ body {
 
 .navbar li {
     float: left;
+}
+
+/*iPhone 14 and newer */
+@media (max-width: 430px) {
+    .text {
+        font-size: 60px; 
+        top: 10%;
+    }
+
+    .aboutinfo {
+        font-size: 28px; 
+        top: 50%;
+    }
+
+    .navbar a {
+        font-size: 24px; 
+        padding: 12px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .navbar ul {
+        left: 20px;
+        right: 20px;
+        bottom: 30px;
+    }
+}
+
+/*(iPhone 14 Plus, iPhone 14 Pro Max) */
+@media (max-width: 844px) and (min-width: 431px) {
+    .text {
+        font-size: 70px; 
+        top: 8%;
+    }
+
+    .aboutinfo {
+        font-size: 30px; 
+        top: 45%;
+    }
+
+    .navbar a {
+        font-size: 28px;
+        padding: 15px;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    .navbar ul {
+        left: 30px;
+        right: 30px;
+        bottom: 40px;
+    }
+}
+
+
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    .text {
+        font-size: 90px;
+        top: 5%;
+    }
+
+    .aboutinfo {
+        font-size: 35px;
+        top: 40%;
+    }
+
+    .navbar a {
+        font-size: 32px;
+        padding: 17px;
+        margin-right: 120px;
+        margin-left: 120px;
+    }
+
+    .navbar ul {
+        left: 55px;
+        right: 55px;
+        bottom: 50px;
+    }
 }
