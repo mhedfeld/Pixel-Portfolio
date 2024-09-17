@@ -1,4 +1,4 @@
-/* FONT DECLARATIONS */
+/*FONT DECLARATIONS */
 @font-face {
     font-family: Comic;
     src: url(dpcomic.ttf);
@@ -7,78 +7,100 @@
     font-family: 'Headerfont';
     src: url(ComicSansMSPixel.ttf);
 }
-
+.heading {
+    text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+    font-family: 'Headerfont', Comic;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    transform: translateY(-180px);
+    animation: Floating  3.5s infinite;
+}
+@keyframes Floating {
+    0% {
+        transform: translateY(-180px);
+    }
+    50% {
+        transform: translateY(-170px);
+    }
+    100% {
+        transform: translateY(-180px);
+    }
+}
+.heading span {
+    color: rgb(1, 188, 188);
+}
 form {
     background: rgba(173, 171, 171, 0.13); /* Glass morphism background */
     border-radius: 16px; /* Rounded corners */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     backdrop-filter: blur(5.2px); /* Blur effect */
     -webkit-backdrop-filter: blur(5.2px); /* Safari support */
-    border: 1px solid rgba(173, 171, 171, 0.34); /* Border similar to navbar */
-    max-width: 49rem; 
-    margin: 10rem auto;
-    padding: 1.4rem; 
-    text-align: center; 
-    color: white; 
+    border: 1px solid rgba(173, 171, 171, 0.34);
+    max-width: 49rem;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    min-height: 550px;
+    height: auto;
+    position: relative;
+    top: -200px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
 }
-
 form h2 {
-    margin-bottom: 2.1rem; 
+    margin-bottom: 2.1rem;
     color: white;
 }
-
 form .input-box {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1.4rem; 
+    gap: 1.4rem;
 }
-
 form .input-box input,
 form textarea {
     font-family: 'Headerfont', Comic; /* Use custom font */
     width: 94%;
-    padding: 1.05rem; 
-    font-size: 1.12rem; 
+    padding: 0.5rem;
+    font-size: 1.12rem;
     color: var(--text-color);
     background: rgba(255, 255, 255, 0.1); /* Transparent background */
-    border-radius: 0.56rem; 
+    border-radius: 0.56rem;
     border: 2px solid rgba(173, 171, 171, 0.34); /* Light border for input */
-    margin: 0.6rem 0; 
+    margin: 0.3rem 0;
     resize: none;
-    outline: none; 
+    outline: none;
 }
-
 form textarea {
-    font-size: 1rem; 
-    padding: 0.85rem; 
+    font-size: 1rem;
+    padding: 0.6rem;
 }
-
 form .input-box input:focus,
 form textarea:focus {
-    border: 2px solid var(--main-color); 
+    border: 2px solid var(--main-color);
 }
-
 form .btn {
     font-family: 'Headerfont', Comic; /* Use custom font */
     background: rgba(173, 171, 171, 0.13);
     border-radius: 16px;
-    padding: 0.7rem 1.4rem; 
+    padding: 0.7rem 1.4rem;
     color: white;
-    font-size: 1.12rem; 
+    font-size: 1.12rem;
     cursor: pointer;
     border: 2px solid rgba(173, 171, 171, 0.34);
     transition: background-color 0.3s ease;
 }
-
 form .btn:hover {
-    background-color: rgb(1, 188, 188); 
+    background-color: rgb(1, 188, 188);
 }
-
 /* Body Style */
 body {
     background-image: url('Contactme.gif');
-    background-size: 100% auto; 
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center;
     background-color: black;
@@ -88,10 +110,11 @@ body {
     overflow: hidden; /* Prevent scrolling */
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-end;
+    padding: 2rem;
 }
-
-/* Navbar Styling*/ 
+/* Navbar Styling*/
 .navbar ul {
     /* Navbar Glass Morhpism generated with css.glass */
     background: rgba(173, 171, 171, 0.13);
@@ -100,7 +123,6 @@ body {
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
     border: 1px solid rgba(173, 171, 171, 0.34);
-
     position: fixed;
     bottom: 50px;
     left: 55px;
@@ -112,7 +134,6 @@ body {
     display: flex;
     justify-content: center;
 }
-    
 .navbar a {
     /* Navbar Glass Morhpism generated with css.glass */
     background: rgba(173, 171, 171, 0.13);
@@ -121,8 +142,7 @@ body {
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
     border: 1px solid rgba(173, 171, 171, 0.34);
-
-    font-family: 'Headerfont', Comic;  
+    font-family: 'Headerfont', Comic;
     font-size: 32px;
     font-family: Comic;
     color: white;
@@ -131,90 +151,74 @@ body {
     margin-right: 120px;
     margin-left: 120px;
     display: block;
-    text-align: center;   
+    text-align: center;
 }
-
 .navbar a:hover {
     background-color: rgb(1, 188, 188);
 }
-
 .navbar li {
     float: left;
 }
-
 /*iPhone 14 and newer */
 @media (max-width: 430px) {
     .text {
-        font-size: 60px; 
+        font-size: 60px;
         top: 10%;
     }
-
     .aboutinfo {
-        font-size: 28px; 
+        font-size: 28px;
         top: 50%;
     }
-
     .navbar a {
-        font-size: 24px; 
+        font-size: 24px;
         padding: 12px;
         margin-right: 40px;
         margin-left: 40px;
     }
-
     .navbar ul {
         left: 20px;
         right: 20px;
         bottom: 30px;
     }
 }
-
 /*(iPhone 14 Plus, iPhone 14 Pro Max) */
 @media (max-width: 844px) and (min-width: 431px) {
     .text {
-        font-size: 70px; 
+        font-size: 70px;
         top: 8%;
     }
-
     .aboutinfo {
-        font-size: 30px; 
+        font-size: 30px;
         top: 45%;
     }
-
     .navbar a {
         font-size: 28px;
         padding: 15px;
         margin-right: 60px;
         margin-left: 60px;
     }
-
     .navbar ul {
         left: 30px;
         right: 30px;
         bottom: 40px;
     }
 }
-
-
-
 /* Desktop */
 @media only screen and (min-width: 1024px) {
     .text {
         font-size: 90px;
         top: 5%;
     }
-
     .aboutinfo {
         font-size: 35px;
         top: 40%;
     }
-
     .navbar a {
         font-size: 32px;
         padding: 17px;
         margin-right: 120px;
         margin-left: 120px;
     }
-
     .navbar ul {
         left: 55px;
         right: 55px;
