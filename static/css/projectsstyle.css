@@ -1,0 +1,279 @@
+
+/* FONT DECLARATIONS*/
+@font-face {
+    font-family: Comic;
+    src: url(/assets/fonts/dpcomic.ttf);
+}
+@font-face {
+    font-family: 'Headerfont' ;
+    src: url(/assets/fonts/ComicSansMSPixel.ttf);
+}
+
+
+.text {
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black; /* Adds Text Border in form of Small text shadow */
+    color: aliceblue;
+    font-size: 90px;
+    font-family: Comic;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    left:50%;
+    top: 15%;
+    border-right: 5px solid;
+    width: 11ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(43, end),
+        cursor-blink 0.75s steps(1) infinite;
+}
+/*Cursor blinking*/ 
+@keyframes cursor-blink {
+    50% { border-color: transparent;}
+    
+    
+}
+@keyframes typing {
+   from { width: 0}
+    to { width: 12ch}
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+
+.card   {
+    max-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    height: 300px;
+    padding: 35px;
+  
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.4px);
+    -webkit-backdrop-filter: blur(2.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .card-footer {
+    font-size: 0.65em;
+    color: #446;
+  }
+  
+
+.navbar ul{
+    /*Navbar Glass Morhpism  generated with css.glass*/
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(173, 171, 171, 0.34);
+
+    position: fixed;
+    bottom: 50px;
+    left: 55px;
+    right: 55px;
+    list-style-type: none;
+    padding: 10px 10px;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+    
+.navbar a{
+    /*Navbar Glass Morhpism  generated with css.glass*/
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(173, 171, 171, 0.34);
+
+    font-family: 'Headerfont', Comic;  
+    font-size: 32px;
+    font-family: Comic;
+    color: white;
+    text-decoration: none;
+    padding: 17px;
+    margin-right: 120px;
+    margin-left: 120px;
+    display: block;
+    text-align: center;   
+}
+.navbar a:hover{
+    background-color: rgb(1, 188, 188);
+}
+.navbar li{
+    float: left;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.parallax-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url('../assets/gif/kirokaze projects.gif');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    will-change: transform;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding-top: 100vh;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px 0;
+}
+
+.main-heading {
+    text-align: center;
+    font-family: 'Headerfont', Comic, sans-serif;
+    font-size: 48px;
+    color: white;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h2 {
+    font-family: 'Headerfont', Comic, sans-serif;
+    color: white;
+    margin-top: 0;
+}
+
+.project-card p {
+    font-family: Comic, sans-serif;
+    color: #ddd;
+}
+@media (max-width: 430px) {
+    .text {
+        font-size: 60px; 
+        top: 10%;
+    }
+
+    .aboutinfo {
+        font-size: 28px; 
+        top: 50%;
+    }
+
+    .navbar a {
+        font-size: 24px; 
+        padding: 12px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .navbar ul {
+        left: 20px;
+        right: 20px;
+        bottom: 30px;
+    }
+}
+
+/* (iPhone 14 Plus, iPhone 14 Pro Max) */
+@media (max-width: 844px) and (min-width: 431px) {
+    .text {
+        font-size: 70px; 
+        top: 8%;
+    }
+
+    .aboutinfo {
+        font-size: 30px; 
+        top: 45%;
+    }
+
+    .navbar a {
+        font-size: 28px;
+        padding: 15px;
+        margin-right: 60px;
+        margin-left: 60px;
+    }
+
+    .navbar ul {
+        left: 30px;
+        right: 30px;
+        bottom: 40px;
+    }
+}
+
+/* Media query for desktop */
+@media only screen and (min-width: 1024px) {
+    .text {
+        font-size: 90px;
+        top: 5%;
+    }
+
+    .aboutinfo {
+        font-size: 35px;
+        top: 40%;
+    }
+
+    .navbar a {
+        font-size: 32px;
+        padding: 17px;
+        margin-right: 120px;
+        margin-left: 120px;
+    }
+
+    .navbar ul {
+        left: 55px;
+        right: 55px;
+        bottom: 50px;
+    }
+}
