@@ -33,14 +33,13 @@ These Routes can be accessed via 127.0.0.1:8080/ <br>
 The Dynamic Route Displays a greet message based on the URL Path chosen. <br>
 
 
------------------
-  CURRENT ISSUES
------------------
+--------------------
+KNOWN CURRENT ISSUES
+--------------------
 
-For some reason, during my testing, the CSS for the Project Page is being rendered correctly when run with a live server extension ( running on 127.0.0.1:5500) from vs code. <br>
-However on my system, when loading the project via the actix web server on port 127.0.0.1:8080 the Page is being rendered a lot differently and faulty. <br>
-I currently do not know why this is happening. <br>
-
+While testing, on some systems my Rust Webserver wasnt rendereing the CSS of the Project section properly, this could be due to a system bug or other. 
+I wasnt able to pinpoint the issue as it seemed to have fixed itself, on my system.
+If you encounter an issue with the page not being displayed properly, you can view it individually via a different port or a vs code live server( reason why i realized the error in the first place) .
 
 -----------------
   INSTRUCTIONS
@@ -53,8 +52,6 @@ I currently do not know why this is happening. <br>
 5.open server on 127.0.0.1:8080<br>
 6.Try out the Pages and Routes!<br>
 ------------------<br>
-To check new CSS for Project Page, open in VS Code and run with Live Server Extension. 
-
 
 Credits: <br>
 
