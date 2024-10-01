@@ -1,5 +1,5 @@
-#Pixel Portfolio
-Backend Rust ( Actix Web) 
+#Pixel Portfolio <br>
+Backend in Rust ( Actix Web) 
 
 ----------------
    GENERAL
