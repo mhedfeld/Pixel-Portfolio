@@ -1,11 +1,11 @@
 /*FONT DECLARATIONS */
 @font-face {
     font-family: Comic;
-    src: url(/assets/fonts/dpcomic.ttf);
+    src: url(/static/assets/fonts/dpcomic.ttf);
 }
 @font-face {
     font-family: 'Headerfont';
-    src: url(/assets/fonts/ComicSansMSPixel.ttf);
+    src: url(/static/assets/fonts/ComicSansMSPixel.ttf);
 }
 .heading {
     text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
@@ -99,7 +99,7 @@ form .btn:hover {
 }
 /* Body Style */
 body {
-    background-image: url(/assets/gif/Contactme.gif);
+    background-image: url(/static/assets/gif/Contactme.gif);
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center;

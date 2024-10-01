@@ -1,0 +1,1 @@
+cargo:rustc-env=MIME_TYPES_GENERATED_PATH=/Users/momo/Desktop/Modules/GIT/PixelPortfolio/Server/target/debug/build/mime_guess-298f44790dd688fa/out/mime_types_generated.rs

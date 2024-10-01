@@ -2,11 +2,11 @@
 /* FONT DECLARATIONS*/
 @font-face {
     font-family: Comic;
-    src: url(/assets/fonts/dpcomic.ttf);
+    src: url(/static/assets/fonts/dpcomic.ttf);
 }
 @font-face {
     font-family: 'Headerfont' ;
-    src: url(/assets/fonts/ComicSansMSPixel.ttf);
+    src: url(/static/assets/fonts/ComicSansMSPixel.ttf);
 }
 .container { 
     display: inline-block;
@@ -88,7 +88,7 @@
 
 
 body {
-    background-image: url(/assets/gif/WelcomeBotgif.gif);
+    background-image: url(/static/assets/gif/WelcomeBotgif.gif);
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;
