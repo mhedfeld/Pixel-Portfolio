@@ -2,41 +2,41 @@ use actix_files::Files;
 use actix_web::{web, App, HttpServer, Responder, HttpResponse};
 use serde::Deserialize;
 
-// Greet Struct (Dynamic)
+// Greet Struct 
 #[derive(Deserialize)]
 struct Info {
     name: String,
 }
 
-// Home Page Route (serving static HTML)
+// Home Page Route 
 async fn home() -> impl Responder {
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
         .body(include_str!("../static/html/home.html"))
 }
 
-// About Page Route (serving static HTML)
+// About Page Route 
 async fn about() -> impl Responder {
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
         .body(include_str!("../static/html/about.html"))
 }
 
-// Contact Page Route (serving static HTML)
+// Contact Page Route 
 async fn contact() -> impl Responder {
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
         .body(include_str!("../static/html/contact.html"))
 }
 
-// Projects Page Route (serving static HTML)
+// Projects Page Route 
 async fn projects() -> impl Responder {
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
         .body(include_str!("../static/html/projects.html"))
 }
 
-// Dynamic Route for Greet Page (serving dynamic HTML with embedded name)
+// Dynamic Route for Greet Page 
 async fn greet(info: web::Path<Info>) -> impl Responder {
     let response = format!(
         r#"
@@ -64,19 +64,19 @@ async fn greet(info: web::Path<Info>) -> impl Responder {
         .body(response)
 }
 
-// Main function setting up the Actix Web server
+// Main function / Actix Web Server
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
-            // Static routes serving HTML pages
-            .route("/", web::get().to(home))        // Home Page Route
-            .route("/about", web::get().to(about))  // About Page Route
-            .route("/contact", web::get().to(contact)) // Contact Page Route
-            .route("/projects", web::get().to(projects)) // Projects Page Route
-            .route("/greet/{name}", web::get().to(greet)) // Dynamic Greet Route
+
+            .route("/", web::get().to(home))                     // Home Page Route
+            .route("/about", web::get().to(about))               // About Page Route
+            .route("/contact", web::get().to(contact))           // Contact Page Route
+            .route("/projects", web::get().to(projects))         // Projects Page Route
+            .route("/greet/{name}", web::get().to(greet))        // Dynamic Greet Route
             
-            // Serve static files (CSS, JS, images, fonts) from the assets directory
+            // Serve CSS, JS, images, fonts
             .service(Files::new("/static", "./static").show_files_listing())
     })
     .bind("127.0.0.1:8080")?
