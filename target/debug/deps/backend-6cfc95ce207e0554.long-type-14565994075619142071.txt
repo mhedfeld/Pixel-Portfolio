@@ -1,0 +1,1 @@
+actix_web_httpauth::middleware::HttpAuthentication<actix_web_httpauth::extractors::basic::BasicAuth, fn(actix_web::dev::ServiceRequest, actix_web_httpauth::extractors::basic::BasicAuth) -> std::pin::Pin<std::boxed::Box<dyn futures::Future<Output = std::result::Result<actix_web::dev::ServiceRequest, actix_web::Error>>>>>

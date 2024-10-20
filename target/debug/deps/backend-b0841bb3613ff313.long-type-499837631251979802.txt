@@ -1,0 +1,1 @@
+HttpAuthentication<BasicAuth, fn(ServiceRequest, BasicAuth) -> Pin<Box<dyn futures::Future<Output = Result<ServiceRequest, actix_web::Error>>>>>

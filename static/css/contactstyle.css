@@ -99,7 +99,7 @@ form .btn:hover {
 }
 /* Body Style */
 body {
-    background-image: url(/static/assets/gif/Contactme.gif);
+    background-image: url('https://i.redd.it/bpxxqqvps4h91.gif');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center;

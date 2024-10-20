@@ -1,0 +1,11 @@
+/Users/momo/Desktop/Tests /Test1/target/debug/deps/libparse_zoneinfo-f0ef0887f7e72271.rmeta: /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/lib.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/line.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/structure.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/table.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/transitions.rs
+
+/Users/momo/Desktop/Tests /Test1/target/debug/deps/libparse_zoneinfo-f0ef0887f7e72271.rlib: /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/lib.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/line.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/structure.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/table.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/transitions.rs
+
+/Users/momo/Desktop/Tests /Test1/target/debug/deps/parse_zoneinfo-f0ef0887f7e72271.d: /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/lib.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/line.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/structure.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/table.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/transitions.rs
+
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/lib.rs:
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/line.rs:
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/structure.rs:
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/table.rs:
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/parse-zoneinfo-0.3.1/src/transitions.rs:

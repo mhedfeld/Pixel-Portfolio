@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/projectsstyle.css">
+    <title>{{ project.title }} - Project Details</title>
+</head>
+<body>
+    <div class="parallax-container">
+        <div class="parallax-bg"></div>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/"> Home  </a></li>
+            <li><a href="/about"> About </a></li>
+            <li><a href="/projects"> Projects </a></li>
+            <li><a href="/contact"> Contact </a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="content-wrapper">
+            <main>
+                <h1 class="main-heading">{{ project.title }}</h1>
+                <div class="project-detail">
+                    <img src="{{ project.image }}" alt="{{ project.title }} Image" class="project-image">
+                    <p>{{ project.description }}</p>
+                    <a href="{{ project.link }}" target="_blank">Visit Project</a>
+                    <a href="/projects">Back to Projects</a>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

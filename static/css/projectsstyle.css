@@ -124,20 +124,24 @@ body {
     left: 0;
     width: 100%;
     height: 120%;
-    background-image: url('/static/assets/gif/kirokaze projects.gif');
+    background-image: url('https://i.pinimg.com/originals/1c/4a/45/1c4a4596912277e7b3b209f1ccf49927.gif');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
     will-change: transform;
 }
+.parallax-container, .parallax-bg {
+    pointer-events: none;
+}
 .content-wrapper {
     position: relative;
-    z-index: -1;
+    z-index: 1000;
     min-height: 100vh;
     padding-top: 100vh;
 }
 main {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(37, 65, 61, 0.533);
+    
     padding: 50px 0;
     z-index: 1;
     padding-top: 100px
@@ -176,7 +180,9 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     transition: transform 0.3s ease;
-    z-index: 1;
+    z-index: 1000;
+    position: relative;
+    pointer-events: all !important;
 }
 .project-card:hover {
     transform: translateY(-5px);
@@ -190,6 +196,11 @@ main {
 .project-card p {
     font-family: Comic, sans-serif;
     color: #ddd;
+}
+.learn-more-link {
+    position: relative;
+    z-index: 1001;
+    pointer-events: auto !important;
 }
 @media (max-width: 430px) {
     .text {

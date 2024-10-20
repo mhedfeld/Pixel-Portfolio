@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Contact Messages</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Add new project form -->
+        <h2 data-value="ADMIN PANEL">ADMIN PANEL</h2>
+        <form action="/admin/add_project" method="POST">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="description" placeholder="Description" required>
+            <input type="url" name="link" placeholder="Link" required>
+            <input type="url" name="image" placeholder="Image URL" required>
+            <button type="submit">Add Project</button>
+        </form>
+
+        <!-- Existing messages table -->
+        <h1>Contact Messages</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Message</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.id }}</td>
+                    <td>{{ contact.name }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.phone | default(value="N/A") }}</td>
+                    <td>{{ contact.message }}</td>
+                    <td>
+                        <form action="/admin/delete_contact" method="POST">
+                            <input type="hidden" name="id" value="{{ contact.id }}">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/js/admin.js"></script>
+</body>
+</html>
