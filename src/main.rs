@@ -9,9 +9,10 @@ use lazy_static::lazy_static;
 use actix_web::error::ResponseError;
 use std::fmt;
 
-mod auth; // Ensure this is at the top of your main.rs
-use crate::auth::auth_middleware; // This should work if auth.rs is 
+mod auth;
+use crate::auth::auth_middleware; 
 
+//Tera Template
 lazy_static! {
     pub static ref TEMPLATES: Tera = {
         let mut tera = match Tera::new("templates/**/*") {
@@ -64,7 +65,19 @@ impl From<actix_web::Error> for CustomError {
 //Project Struct 
 #[derive(Serialize, Deserialize)]
 struct Project {
-    id: i32,
+    id: Option<i32>,  // Make id optional for new projects
+    title: String,
+    description: String,
+    link: String,
+    image: String,
+    tech_stack: Option<String>,
+    challenges: Option<String>,
+    future_plans: Option<String>,
+}
+
+//Update Project Struct
+#[derive(Deserialize, Serialize)]
+struct UpdateProject {
     title: String,
     description: String,
     link: String,
@@ -134,18 +147,24 @@ async fn admin_messages(data: web::Data<AppState>) -> Result<HttpResponse, Custo
     Ok(HttpResponse::Ok().content_type("text/html").body(rendered))
 }
 
-async fn add_project(form: web::Form<Project>, data: web::Data<AppState>) -> Result<HttpResponse, CustomError> {
+async fn add_project(form: web::Json<Project>, data: web::Data<AppState>) -> Result<HttpResponse, CustomError> {
     let conn = data.db_pool.get().map_err(|e| {
         eprintln!("Failed to get db connection: {}", e);
         CustomError::ActixError(actix_web::error::ErrorInternalServerError("Database error"))
     })?;
 
+    let link = if form.link.starts_with("http://") || form.link.starts_with("https://") {
+        form.link.clone()
+    } else {
+        format!("/project/{}", form.link)
+    };
+
     conn.execute(
-        "INSERT INTO projects (title, description, link, image) VALUES (?1, ?2, ?3, ?4)",
-        params![form.title, form.description, form.link, form.image],
+        "INSERT INTO projects (title, description, link, image, tech_stack, challenges, future_plans) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)",
+        params![form.title, form.description, link, form.image, form.tech_stack, form.challenges, form.future_plans],
     )?;
 
-    Ok(HttpResponse::SeeOther().append_header(("Location", "/admin")).finish())
+    Ok(HttpResponse::Ok().json(serde_json::json!({"success": true})))
 }
 async fn project_detail(data: web::Data<AppState>, project_id: web::Path<i32>) -> Result<HttpResponse, CustomError> {
     let conn = data.db_pool.get().map_err(|e| {
@@ -154,7 +173,7 @@ async fn project_detail(data: web::Data<AppState>, project_id: web::Path<i32>) -
     })?;
 
     let project = conn.query_row(
-        "SELECT id, title, description, link, image FROM projects WHERE id = ?1",
+        "SELECT id, title, description, link, image, tech_stack, challenges, future_plans FROM projects WHERE id = ?1",
         params![project_id.into_inner()],
         |row| {
             Ok(Project {
@@ -163,6 +182,9 @@ async fn project_detail(data: web::Data<AppState>, project_id: web::Path<i32>) -
                 description: row.get(2)?,
                 link: row.get(3)?,
                 image: row.get(4)?,
+                tech_stack: row.get(5)?,
+                challenges: row.get(6)?,
+                future_plans: row.get(7)?,
             })
         },
     ).map_err(|e| {
@@ -180,6 +202,44 @@ async fn project_detail(data: web::Data<AppState>, project_id: web::Path<i32>) -
         })?;
 
     Ok(HttpResponse::Ok().content_type("text/html").body(rendered))
+}
+
+async fn update_project(
+    data: web::Data<AppState>,
+    project_id: web::Path<i32>,
+    form: web::Json<Project>,
+) -> Result<HttpResponse, CustomError> {
+    let conn = data.db_pool.get().map_err(|e| {
+        eprintln!("Failed to get db connection: {}", e);
+        CustomError::ActixError(actix_web::error::ErrorInternalServerError("Database error"))
+    })?;
+
+    let link = if form.link.starts_with("http://") || form.link.starts_with("https://") {
+        form.link.clone()
+    } else {
+        format!("/project/{}", form.link)
+    };
+
+    conn.execute(
+        "UPDATE projects SET title = ?1, description = ?2, link = ?3, image = ?4, tech_stack = ?5, challenges = ?6, future_plans = ?7 WHERE id = ?8",
+        params![form.title, form.description, link, form.image, form.tech_stack, form.challenges, form.future_plans, project_id.into_inner()],
+    )?;
+
+    Ok(HttpResponse::Ok().json(serde_json::json!({"success": true})))
+}
+
+async fn delete_project(
+    data: web::Data<AppState>,
+    project_id: web::Path<i32>,
+) -> Result<HttpResponse, CustomError> {
+    let conn = data.db_pool.get().map_err(|e| {
+        eprintln!("Failed to get db connection: {}", e);
+        CustomError::ActixError(actix_web::error::ErrorInternalServerError("Database error"))
+    })?;
+
+    conn.execute("DELETE FROM projects WHERE id = ?1", params![project_id.into_inner()])?;
+
+    Ok(HttpResponse::Ok().json(serde_json::json!({"success": true})))
 }
 
 async fn delete_contact(form: web::Form<DeleteForm>, data: web::Data<AppState>) -> Result<HttpResponse, CustomError> {
@@ -231,7 +291,7 @@ async fn projects_data() -> Result<HttpResponse, CustomError> {
         CustomError::ActixError(actix_web::error::ErrorInternalServerError("Database error"))
     })?;
 
-    let mut stmt = conn.prepare("SELECT id, title, description, link, image FROM projects").map_err(|e| {
+    let mut stmt = conn.prepare("SELECT id, title, description, link, image, tech_stack, challenges, future_plans FROM projects").map_err(|e| {
         eprintln!("Failed to prepare statement: {}", e);
         CustomError::ActixError(actix_web::error::ErrorInternalServerError("Database error"))
     })?;
@@ -243,6 +303,9 @@ async fn projects_data() -> Result<HttpResponse, CustomError> {
             description: row.get(2)?,
             link: row.get(3)?,
             image: row.get(4)?,
+            tech_stack: row.get(5)?,
+            challenges: row.get(6)?,
+            future_plans: row.get(7)?,
         })
     }).map_err(|e| {
         eprintln!("Failed to execute query: {}", e);
@@ -324,6 +387,8 @@ async fn main() -> std::io::Result<()> {
                     .route("", web::get().to(admin_messages))
                     .route("/add_project", web::post().to(add_project))
                     .route("/delete_contact", web::post().to(delete_contact))
+                    .route("/update_project/{id}", web::post().to(update_project))
+                    .route("/delete_project/{id}", web::post().to(delete_project))
             )
             .service(Files::new("/static", "./static").show_files_listing())
     })

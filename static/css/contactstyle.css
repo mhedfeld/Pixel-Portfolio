@@ -34,7 +34,7 @@
 form {
     background: rgba(173, 171, 171, 0.13); /* Glass morphism background */
     border-radius: 16px; /* Rounded corners */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.2px); /* Blur effect */
     -webkit-backdrop-filter: blur(5.2px); /* Safari support */
     border: 1px solid rgba(173, 171, 171, 0.34);
@@ -84,7 +84,7 @@ form textarea:focus {
     border: 2px solid var(--main-color);
 }
 form .btn {
-    font-family: 'Headerfont', Comic; /* Use custom font */
+    font-family: 'Headerfont', Comic; 
     background: rgba(173, 171, 171, 0.13);
     border-radius: 16px;
     padding: 0.7rem 1.4rem;
@@ -107,7 +107,7 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,49 +115,55 @@ body {
     padding: 2rem;
 }
 /* Navbar Styling*/
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+}
+
 .navbar ul {
-    /* Navbar Glass Morhpism generated with css.glass */
     background: rgba(173, 171, 171, 0.13);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
     border: 1px solid rgba(173, 171, 171, 0.34);
-    position: fixed;
-    bottom: 50px;
-    left: 55px;
-    right: 55px;
     list-style-type: none;
-    padding: 10px 10px;
+    padding: 5px;
     margin: 0;
-    overflow: hidden;
     display: flex;
     justify-content: center;
+    width: 80%; 
 }
+
+.navbar li {
+    margin: 0 5px;
+    flex: 1; 
+}
+
 .navbar a {
-    /* Navbar Glass Morhpism generated with css.glass */
     background: rgba(173, 171, 171, 0.13);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
     border: 1px solid rgba(173, 171, 171, 0.34);
     font-family: 'Headerfont', Comic;
-    font-size: 32px;
-    font-family: Comic;
+    font-size: 16px;
     color: white;
     text-decoration: none;
-    padding: 17px;
-    margin-right: 120px;
-    margin-left: 120px;
+    padding: 5px 8px;
     display: block;
     text-align: center;
+    white-space: nowrap; 
 }
+
 .navbar a:hover {
     background-color: rgb(1, 188, 188);
-}
-.navbar li {
-    float: left;
 }
 /*iPhone 14 and newer */
 @media (max-width: 430px) {
@@ -213,15 +219,11 @@ body {
         font-size: 35px;
         top: 40%;
     }
-    .navbar a {
-        font-size: 32px;
-        padding: 17px;
-        margin-right: 120px;
-        margin-left: 120px;
-    }
     .navbar ul {
-        left: 55px;
-        right: 55px;
-        bottom: 50px;
+        width: 80%;
+    }
+    .navbar a {
+        font-size: 18px;
+        padding: 5px, 8px;
     }
 }

@@ -1,0 +1,11 @@
+/Users/momo/Desktop/Tests /Test2/target/debug/deps/libpest_generator-77ab0c90ef7285ec.rmeta: /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/lib.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/macros.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/docs.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/generator.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/parse_derive.rs
+
+/Users/momo/Desktop/Tests /Test2/target/debug/deps/libpest_generator-77ab0c90ef7285ec.rlib: /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/lib.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/macros.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/docs.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/generator.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/parse_derive.rs
+
+/Users/momo/Desktop/Tests /Test2/target/debug/deps/pest_generator-77ab0c90ef7285ec.d: /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/lib.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/macros.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/docs.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/generator.rs /Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/parse_derive.rs
+
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/lib.rs:
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/macros.rs:
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/docs.rs:
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/generator.rs:
+/Users/momo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pest_generator-2.7.14/src/parse_derive.rs:

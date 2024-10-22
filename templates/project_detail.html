@@ -3,34 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/projectsstyle.css">
     <title>{{ project.title }} - Project Details</title>
+    <link rel="stylesheet" href="/static/css/project_detail.css">
 </head>
 <body>
-    <div class="parallax-container">
-        <div class="parallax-bg"></div>
-    </div>
-    <nav class="navbar">
-        <ul>
-            <li><a href="/"> Home  </a></li>
-            <li><a href="/about"> About </a></li>
-            <li><a href="/projects"> Projects </a></li>
-            <li><a href="/contact"> Contact </a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <div class="content-wrapper">
-            <main>
-                <h1 class="main-heading">{{ project.title }}</h1>
-                <div class="project-detail">
-                    <img src="{{ project.image }}" alt="{{ project.title }} Image" class="project-image">
-                    <p>{{ project.description }}</p>
-                    <a href="{{ project.link }}" target="_blank">Visit Project</a>
-                    <a href="/projects">Back to Projects</a>
-                </div>
-            </main>
-        </div>
-    </div>
-    <script src="/static/js/script.js"></script>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <section class="hero">
+            <h1 class="project-title">{{ project.title }}</h1>
+            <div class="project-image">
+                <img src="{{ project.image }}" alt="{{ project.title }}">
+            </div>
+        </section>
+
+        <section class="project-info">
+            <div class="info-column">
+                <h2>Overview</h2>
+                <p>{{ project.description }}</p>
+            </div>
+            <div class="info-column">
+                <h2>Tech Stack</h2>
+                <p>{{ project.tech_stack | default(value="") }}</p>
+            </div>
+        </section>
+
+        <section class="project-details">
+            <div class="detail-column">
+                <h2>Challenges</h2>
+                <p>{{ project.challenges | default(value="") }}</p>
+            </div>
+            <div class="detail-column">
+                <h2>Future Plans</h2>
+                <p>{{ project.future_plans | default(value="") }}</p>
+            </div>
+        </section>
+
+        <section class="project-link">
+            <a href="{{ project.link }}" target="_blank" class="cta-button">View Project</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Maurice Hedfeld. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/project_detail.js"></script>
 </body>
 </html>

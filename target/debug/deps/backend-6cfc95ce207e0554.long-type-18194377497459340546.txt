@@ -1,0 +1,1 @@
+fn(actix_web::web::Data<AppState>, actix_web::web::Path<i32>, {type error}) -> impl futures::Future<Output = std::result::Result<actix_web::HttpResponse, CustomError>> {update_project}

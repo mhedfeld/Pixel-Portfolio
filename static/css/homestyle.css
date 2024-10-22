@@ -8,8 +8,56 @@
     font-family: 'Headerfont' ;
     src: url(/static/assets/fonts/ComicSansMSPixel.ttf);
 }
+
+.intro {
+    max-width: 50%;
+    text-align: left;
+    padding-left: 10px; 
+    margin-top: 110px;
+    transform: translateX(-105px);
+}
+
+.intro h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #a4a4a4;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 0 0 2.5px #a8a8a8, 0 0 5px #B0B0B0, 0 0 7.5px #B0B0B0, 0 0 10px #B0B0B0, 0 0 12.5px #B0B0B0, 0 0 15px #B0B0B0, 0 0 22.5px #B0B0B0;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.6rem;
+    color: #B0B0B0;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 25px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.illustration img {
+    max-width: 100%;
+    height: auto;
+    border: 10px groove white;
+    box-shadow: 4px 4px 0 #000, 4px 4px 0 1px #000;
+}
 .container { 
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 .text {
@@ -18,10 +66,10 @@
     font-size: 90px;
     font-family: Comic;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%); 
     text-align: center;
-    left:50%;
-    top: 15%;
+    left: 22.5%;
+    top: 5%; 
     border-right: 5px solid;
     width: 11ch;
     white-space: nowrap;
@@ -41,70 +89,80 @@
     to { width: 12ch}
 }
 
-.navbar ul{
-    /*Navbar Glass Morhpism  generated with css.glass*/
-    background: rgba(173, 171, 171, 0.13);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.2px);
-    -webkit-backdrop-filter: blur(5.2px);
-    border: 1px solid rgba(173, 171, 171, 0.34);
-
+.navbar {
     position: fixed;
-    bottom: 50px;
-    left: 55px;
-    right: 55px;
-    list-style-type: none;
-    padding: 10px 10px;
-    margin: 0;
-    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1002;
     display: flex;
     justify-content: center;
+    padding-top: 10px;
 }
-    
-.navbar a{
-    /*Navbar Glass Morhpism  generated with css.glass*/
+
+.navbar ul {
     background: rgba(173, 171, 171, 0.13);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
     border: 1px solid rgba(173, 171, 171, 0.34);
+    list-style-type: none;
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
 
-    font-family: 'Headerfont', Comic;  
-    font-size: 32px;
-    font-family: Comic;
+.navbar li {
+    margin: 0 5px;
+    flex: 1;
+}
+
+.navbar a {
+    background: rgba(173, 171, 171, 0.13);
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border: 1px solid rgba(173, 171, 171, 0.34);
+    font-family: 'Headerfont', Comic;
+    font-size: 16px;
     color: white;
     text-decoration: none;
-    padding: 17px;
-    margin-right: 40px;
-    margin-left: 40px;
+    padding: 5px 8px;
     display: block;
-    text-align: center;   
+    text-align: center;
+    white-space: nowrap; 
 }
-.navbar a:hover{
+
+.navbar a:hover {
     background-color: rgb(1, 188, 188);
 }
 
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 50px 50px 50px;
+}
 
 body {
-    background-image: url('https://cdna.artstation.com/p/assets/images/images/042/626/882/original/christopher-anry-planningtherox-large720p.gif?1635021484');
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;
-    height: 100vh;
-    width: 100vw;
     margin: 0;
-    overflow: hidden; /* Prevents scrolling */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    font-family: 'Headerfont' , 'Comic';
+    background-size: cover;
+    background-position: center;
+    background-color: #121212;
+    color: #E0E0E0;
 }
 @media (max-width: 430px) {
     .text {
-        font-size: 60px; 
-        top: 10%;
+        font-size: 60px;
+    }
+
+    .intro, .illustration {
+        max-width: 100%;
     }
 
     .aboutinfo {
@@ -129,8 +187,11 @@ body {
 /* (iPhone 14 Plus, iPhone 14 Pro Max) */
 @media (max-width: 844px) and (min-width: 431px) {
     .text {
-        font-size: 70px; 
-        top: 8%;
+        font-size: 70px;
+    }
+
+    .intro, .illustration {
+        max-width: 100%;
     }
 
     .aboutinfo {
@@ -156,7 +217,6 @@ body {
 @media only screen and (min-width: 1024px) {
     .text {
         font-size: 90px;
-        top: 5%;
     }
 
     .aboutinfo {
@@ -164,16 +224,11 @@ body {
         top: 40%;
     }
 
-    .navbar a {
-        font-size: 32px;
-        padding: 17px;
-        margin-right: 120px;
-        margin-left: 120px;
-    }
-
     .navbar ul {
-        left: 55px;
-        right: 55px;
-        bottom: 50px;
+        width: 80%;
+    }
+    .navbar a {
+        font-size: 18px;
+        padding: 5px, 8px;
     }
 }

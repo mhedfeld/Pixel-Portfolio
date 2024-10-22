@@ -13,12 +13,11 @@
     font-size: 90px;
     font-family: Comic;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
     text-align: center;
     left:50%;
-    top: 50%;
     border-right: 5px solid;
-    width: 11ch;
+    width: 18ch;
     white-space: nowrap;
     overflow: hidden;
     animation:
@@ -31,7 +30,7 @@
 }
 @keyframes typing {
    from { width: 0}
-    to { width: 12ch}
+    to { width: 19ch}
 }
 .container{
     display: flex;
@@ -58,50 +57,55 @@
     font-size: 0.65em;
     color: #446;
   }
-.navbar ul{
-    /*Navbar Glass Morhpism  generated with css.glass*/
+  .navbar {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
     background: rgba(173, 171, 171, 0.13);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
     border: 1px solid rgba(173, 171, 171, 0.34);
-    position: fixed;
-    bottom: 50px;
-    left: 55px;
-    right: 55px;
     list-style-type: none;
-    padding: 10px 10px;
+    padding: 5px;
     margin: 0;
-    overflow: hidden;
     display: flex;
     justify-content: center;
-    z-index: 1000;
+    width: 80%; 
 }
-.navbar a{
-    /*Navbar Glass Morhpism  generated with css.glass*/
+
+.navbar li {
+    margin: 0 5px;
+    flex: 1; 
+}
+
+.navbar a {
     background: rgba(173, 171, 171, 0.13);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.2px);
     -webkit-backdrop-filter: blur(5.2px);
     border: 1px solid rgba(173, 171, 171, 0.34);
     font-family: 'Headerfont', Comic;
-    font-size: 32px;
-    font-family: Comic;
+    font-size: 16px;
     color: white;
     text-decoration: none;
-    padding: 17px;
-    margin-right: 120px;
-    margin-left: 120px;
+    padding: 5px 8px;
     display: block;
     text-align: center;
+    white-space: nowrap; 
 }
-.navbar a:hover{
+
+.navbar a:hover {
     background-color: rgb(1, 188, 188);
-}
-.navbar li{
-    float: left;
 }
 body {
     margin: 0;
@@ -117,18 +121,22 @@ body {
     height: 100vh;
     overflow: hidden;
     z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .parallax-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%;
-    background-image: url('https://i.pinimg.com/originals/1c/4a/45/1c4a4596912277e7b3b209f1ccf49927.gif');
+    width: 40%; 
+    height: 35%;
+    background-image: url('https://64.media.tumblr.com/13b0324ec81dc0c644ef278239cb0734/756810766ffd1009-55/s1280x1920/2e5e26a8a7276adbac72921520735bedd51da46d.gif');
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
     background-repeat: no-repeat;
     will-change: transform;
+    border-radius: 25px;
+    border: 10px groove white;
+    box-sizing: border-box; 
 }
 .parallax-container, .parallax-bg {
     pointer-events: none;
@@ -137,27 +145,35 @@ body {
     position: relative;
     z-index: 1000;
     min-height: 100vh;
-    padding-top: 100vh;
+    padding-top: calc(100vh - 150px); 
 }
+
 main {
-    background-color: rgba(37, 65, 61, 0.533);
-    
-    padding: 50px 0;
-    z-index: 1;
-    padding-top: 100px
-}
+        background: rgba(130, 205, 134, 0.584);
+        border-radius: 25px; 
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(11.7px);
+        -webkit-backdrop-filter: blur(11.7px);
+        border: 1px solid rgba(190, 144, 76, 0.3);
+        padding: 25px 0;
+        z-index: 1;
+        padding-top: 50px; 
+        margin-top: 50px; 
+    }
 .main-heading {
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     text-align: center;
     font-family: 'Headerfont', Comic, sans-serif;
-    font-size: 48px;
+    font-size: 60px;
     color: white;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 40px; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .main-heading span
 {    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-    color: #01BCBC;
+    color: #5bc660;
+    text-shadow: 0 0 2.5px #63a657, 0 0 5px #63a657, 0 0 7.5px #63a657, 0 0 10px #63a657, 0 0 12.5px #63a657, 0 0 15px #63a657, 0 0 22.5px #63a657;
 }
 .project-container {
     display: flex;
@@ -211,16 +227,12 @@ main {
         font-size: 28px;
         top: 50%;
     }
-    .navbar a {
-        font-size: 24px;
-        padding: 12px;
-        margin-right: 40px;
-        margin-left: 40px;
-    }
     .navbar ul {
-        left: 20px;
-        right: 20px;
-        bottom: 30px;
+        width: 95%;
+    }
+    .navbar a {
+        font-size: 14px;
+        padding: 8px;
     }
 }
 /* (iPhone 14 Plus, iPhone 14 Pro Max) */
@@ -233,16 +245,12 @@ main {
         font-size: 30px;
         top: 45%;
     }
-    .navbar a {
-        font-size: 28px;
-        padding: 15px;
-        margin-right: 60px;
-        margin-left: 60px;
-    }
     .navbar ul {
-        left: 30px;
-        right: 30px;
-        bottom: 40px;
+        width: 90%;
+    }
+    .navbar a {
+        font-size: 16px;
+        padding: 10px;
     }
 }
 /* Media query for desktop */
@@ -255,15 +263,12 @@ main {
         font-size: 35px;
         top: 40%;
     }
-    .navbar a {
-        font-size: 32px;
-        padding: 17px;
-        margin-right: 120px;
-        margin-left: 120px;
-    }
     .navbar ul {
-        left: 55px;
-        right: 55px;
-        bottom: 50px;
+        width: 80%;
+    }
+    .navbar a {
+        font-size: 18px;
+        padding: 5px, 8px;
     }
 }
+

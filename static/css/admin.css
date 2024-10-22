@@ -52,6 +52,13 @@ h2:hover {
     color: black;
 }
 
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -102,4 +109,96 @@ button {
 
 button:hover {
     background-color: grey;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-edit {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+}
+
+.project-edit h4 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.edit-project-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-project-form input,
+.edit-project-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.edit-project-form button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.delete-project {
+    background-color: #ff4444;
+    color: white;
+}
+
+.delete-project:hover {
+    background-color: #ff6666;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.notification.success {
+    background-color: #4CAF50;
+}
+
+.notification.error {
+    background-color: #f44336;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    input[type="text"], input[type="url"], input[type="email"], textarea {
+        width: 100%;
+    }
+}
+
+/* Admin section styles */
+.admin-section {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
