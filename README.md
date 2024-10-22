@@ -1,5 +1,5 @@
 #Pixel Portfolio <br>
-Backend in Rust ( Actix Web) 
+Backend in Rust ( Actix Web) , Tera, Sqlite 
 
 ----------------
    GENERAL
@@ -10,36 +10,46 @@ THIS CODE IS NOT YET FINISHED AND WILL SHOW FLAWS AS SUCH!<br>
 THERE MIGHT BE CODE THAT DOES NOTHING AT ALL, LEFT INSIDE!<br>
 
 This is a basic Pixel Portfolio Page <br>
-Each Page (Home, About,Projects, Contact and Greet) has its individual styling sheet.<br> 
-Media Queries have been implemented to achieve a very "basic" responsive layout. <br>
--> They Currently do not support the smallest nor biggest screen sizes. <br>
--> This will be fixed in the following version. <br>
-Glass Morphism Styling was generated from css.glass <br>
-Project Cards, Descriptions and Images have been implemented.<br>
-A Parallax Scrolling animation has been implemented for the Project page. <br>
-
+It consists of a Homepage, Aboutpage, Project Page (dynamic Project rendering), Contactpage, Greetpage and an Adminpage. <br>
 <br>
 <br>
 <br>  
 
 The Backend was built with the Rust Actix Web Framework <br>
-It currently handles 4 static routes and a single dynamic route. <br>
-These Routes can be accessed via 127.0.0.1:8080/ <br>
+<br>
+Routes can be accessed via 127.0.0.1:8080/ <br>
                                  127.0.0.1:8080/about<br>
                                  127.0.0.1:8080/contact<br>
                                  127.0.0.1:8080/projects<br>
-                  Dynamic Route  127.0.0.1:8080/greet/Momo  <br>
-                  <br>
-The Dynamic Route Displays a greet message based on the URL Path chosen. <br>
+                                 127.0.0.1:8080/project/{id} (1, 3, 4, 5, 6) <br>
+                                 127.0.0.1:8080/admin (login credentials in .env) <br>
+
 
 
 --------------------
 KNOWN CURRENT ISSUES
 --------------------
 
-While testing, on some systems my Rust Webserver wasnt rendereing the CSS of the Project section properly, this could be due to a system bug or other. 
-I wasnt able to pinpoint the issue as it seemed to have fixed itself, on my system.
-If you encounter an issue with the page not being displayed properly, you can view it individually via a different port or a vs code live server( reason why i realized the error in the first place) .
+I Changed the overall styling of the Page, just a day ago, as such the styling of the pages, might be buggy or not fully finished yet. <br>
+Media Queries have been implemented to achieve some responsiveness, however not 100% for the new pages.<br>
+
+Another Issue i was facing during development, was that adding a Project via the Admin Front-End caused the Project to be added twice in the DB, <br> 
+I believe this was caused by a duplicate Event Listener in my admin.js. Since it now seems to work fine. <br>
+
+127.0.0.1:8080/project/2 wont currently work, as i had to remove a project from the database during development and re add it, causing the id {2} to be left out. <br>
+Please use (1, 3, 4, 5, 6) <br>
+
+-----------------
+   FEATURES
+-----------------
+
+Home Page -> Nothing much to do here <br>
+About Page -> Nothing much to do here ( left the same ) <br>
+Project Page -> Project can be added to the db and viewed here. -> Additional Project Detail Page upon Link Click ( Templated ) <br>
+Contact Page -> Contact Form can be submitted <br>
+Greet Page -> Displays a Dynamic Greet message based on the URL Path<br>
+Admin Page -> Allows adding, changing and deleting Projects, aswell as view and delete submitted Contact Form Messages. ( Server can keep running ) <br>
+   -> Requires Authentication Login. ( Login Details provided in .env ( root of repo) ) (ls -la -> nano .env) )<br>
 
 -----------------
   INSTRUCTIONS
@@ -53,6 +63,18 @@ If you encounter an issue with the page not being displayed properly, you can vi
 6.Try out the Pages and Routes!<br>
 ------------------<br>
 
+
+------------------
+   FUTURE GOALS
+------------------
+
+Adjust Styling for all Pages, to maintain responsiveness on all screensizes. <br>
+Cleanup Code base, remove unneeded or duplicate code entries. <br>
+Change Authentication Login storage location. -> Move to DB <br>
+Cleanup Navbar and Header Element Positions on Contact Page and About Page. <br>
+
+
+
 Credits: <br>
 
 HTML Boilerplate, CSS Boilerplate : Other Website Code from myself. <br>
@@ -62,5 +84,6 @@ Image / Gif Sources: <br>
 Home Image: kirokaze | Wallpaper Engine <br>
 About Image: Pixel Jeff | Behance <br>
 Contact Image: Pixel Jeff | Behance <br>
+Admin Image: Pixel Jeff | Behance <br>
 Project Image: Pixel Jeff | Behance <br>
 Greet Image: Pixel Jeff | Behance <br>
